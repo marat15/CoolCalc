@@ -32,6 +32,7 @@ public class CalcActivity extends Activity {
         Button eightBtn = (Button) findViewById(R.id.eightBtn);
         Button nineBtn = (Button) findViewById(R.id.nineBtn);
         Button zeroBtn = (Button) findViewById(R.id.zeroBtn);
+        Button dotBtn = (Button) findViewById(R.id.dotBtn);
 
         ImageButton calcBtn = (ImageButton) findViewById(R.id.calcBtn);
         ImageButton addBtn = (ImageButton) findViewById(R.id.addButn);
@@ -44,73 +45,79 @@ public class CalcActivity extends Activity {
 
         resultsView.setText("0");
 
+        dotBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                numberPressed(".");
+            }
+        });
         oneBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                numberPressed(1);
+                numberPressed("1");
             }
         });
 
         twoBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                numberPressed(2);
+                numberPressed("2");
             }
         });
 
         threeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                numberPressed(3);
+                numberPressed("3");
             }
         });
 
         fourBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                numberPressed(4);
+                numberPressed("4");
             }
         });
 
         fiveBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                numberPressed(5);
+                numberPressed("5");
             }
         });
 
         sixBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                numberPressed(6);
+                numberPressed("6");
             }
         });
 
         sevenBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                numberPressed(7);
+                numberPressed("7");
             }
         });
 
         eightBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                numberPressed(8);
+                numberPressed("8");
             }
         });
 
         nineBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                numberPressed(9);
+                numberPressed("9");
             }
         });
 
         zeroBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                numberPressed(0);
+                numberPressed("0");
             }
         });
 
@@ -164,13 +171,11 @@ public class CalcActivity extends Activity {
 
     }
 
-    void numberPressed(int number) {
+    void numberPressed(String number) {
         runningNumber += String.valueOf(number);
         resultsView.setText(runningNumber);
 
     }
-
-    public enum Operation {ADD, SUBTRACT, MULTIPLY, DIVIDE, EQUAL}
 
     void processOperation(Operation operation) {
         if (currentOperation != null) {
@@ -202,6 +207,8 @@ public class CalcActivity extends Activity {
         }
         currentOperation = operation;
     }
+
+    public enum Operation {ADD, SUBTRACT, MULTIPLY, DIVIDE, EQUAL}
 
 }
 

@@ -14,12 +14,12 @@
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="165dp"
+            android:layout_height="wrap_content"
             android:background="#a02b2b">
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="153dp"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="567"
                 android:id="@+id/resultsText"
@@ -38,7 +38,7 @@
             android:weightSum="4">
 
             <Button
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="110dp"
                 android:text="7"
                 android:id="@+id/sevenBtn"
@@ -50,7 +50,7 @@
                 android:contextClickable="true" />
 
             <Button
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="110dp"
                 android:text="8"
                 android:id="@+id/eightBtn"
@@ -62,7 +62,7 @@
                 android:contextClickable="true" />
 
             <Button
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="110dp"
                 android:text="9"
                 android:id="@+id/nineBtn"
@@ -74,7 +74,7 @@
                 android:contextClickable="true" />
 
             <ImageButton
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="110dp"
                 android:id="@+id/divideBtn"
                 android:src="@drawable/divide"
@@ -86,11 +86,11 @@
 
         <LinearLayout
             android:orientation="horizontal"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <Button
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="110dp"
                 android:text="4"
                 android:id="@+id/fourBtn"
@@ -191,45 +191,77 @@
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:weightSum="4">
 
             <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="206dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:gravity="center_vertical">
+                android:weightSum="2"
+                android:layout_weight="2">
 
                 <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="CLEAR"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:text="C"
                     android:id="@+id/clearBtn"
                     android:textSize="30sp"
                     android:background="#a12c2c"
-                    android:layout_gravity="center"
-                    android:paddingLeft="25dp"
-                    android:paddingRight="25dp" />
+                    android:paddingLeft="0dp"
+                    android:paddingRight="0dp"
+                    android:layout_weight="1"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="0dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="0dp" />
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:text="."
+                    android:id="@+id/dotBtn"
+                    android:textColor="#000000"
+                    android:background="#ffffff"
+                    android:clickable="false"
+                    android:contextClickable="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="0dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="0dp"
+                    android:layout_weight="1"
+                    android:textSize="30sp" />
             </LinearLayout>
 
-            <Button
-                android:layout_width="103dp"
-                android:layout_height="110dp"
-                android:text="0"
-                android:id="@+id/zeroBtn"
-                android:textSize="30sp"
-                android:textColor="#000000"
-                android:background="#ffffff"
-                android:clickable="false"
-                android:contextClickable="true" />
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:weightSum="2">
 
-            <ImageButton
-                android:layout_width="103dp"
-                android:layout_height="110dp"
-                android:id="@+id/addButn"
-                android:src="@drawable/add"
-                android:background="#ffffff"
-                android:contextClickable="true"
-                android:clickable="true" />
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:text="0"
+                    android:id="@+id/zeroBtn"
+                    android:textSize="30sp"
+                    android:textColor="#000000"
+                    android:background="#ffffff"
+                    android:clickable="false"
+                    android:contextClickable="true"
+                    android:layout_weight="1" />
+
+                <ImageButton
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/addButn"
+                    android:src="@drawable/add"
+                    android:background="#ffffff"
+                    android:contextClickable="true"
+                    android:clickable="true"
+                    android:layout_weight="1" />
+            </LinearLayout>
 
         </LinearLayout>
 
@@ -250,4 +282,5 @@
         android:layout_alignWithParentIfMissing="false"
         android:paddingTop="110dp"
         android:paddingRight="5dp" />
+
 </RelativeLayout>
